@@ -7,30 +7,30 @@ public class StageSpawner : MonoBehaviour
 {
     public Canvas gameMapCanvas;
 
-    public GameObject radder;
+    public GameObject ladder;
 
-    public GameObject radderPanel;
+    public GameObject ladderPanel;
 
-    public List<GameObject> radderList = new List<GameObject>();
+    public List<GameObject> ladderList = new List<GameObject>();
 
-    public void SpawnRadder(int _count) 
+    public void SpawnLadder(int _count) 
     {
         for(int i=0; i<_count; i++) {
-            GameObject radderObj = Instantiate(radder);
-            radderObj.transform.SetParent(radderPanel.transform);
+            GameObject ladderObj = Instantiate(ladder);
+            ladderObj.transform.SetParent(ladderPanel.transform);
 
-            radderList.Add(radderObj);
+            ladderList.Add(ladderObj);
         }
     }
 
-    public int RadderCount()
+    public int LadderCount()
     {
-        return radderList.Count;
+        return ladderList.Count;
     }
 
-    public List<GameObject> GetRadderList()
+    public List<GameObject> GetLadderList()
     {
-        return radderList;
+        return ladderList;
     }
 
 }
